@@ -2,7 +2,7 @@
     function generatePassword() {
       const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
       let password = "";
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0;i<Math.floor(Math.random()*5)+6; i++) {
         const randomIndex = Math.floor(Math.random() * chars.length);
         password += chars[randomIndex];
       }
@@ -14,7 +14,8 @@
       if (password && password !== "Click generate") {
         navigator.clipboard.writeText(password);
         alert("Password saved to clipboard!");
-      } else {
+      } 
+      else {
         alert("Generate a password first!");
       }
     }
