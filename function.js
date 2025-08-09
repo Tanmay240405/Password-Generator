@@ -2,7 +2,7 @@
     function generatePassword() {
       const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
       let password = "";
-      for (let i = 0;i<Math.floor(Math.random()*5)+6; i++) {
+      for (let i = 0;i<Math.floor(Math.random()*5)+5; i++) {
         const randomIndex = Math.floor(Math.random() * chars.length);
         password += chars[randomIndex];
       }
